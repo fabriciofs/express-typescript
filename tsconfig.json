@@ -6,12 +6,19 @@
     "strict": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "baseUrl": "./",
+    "paths": {
+      "test/*": [
+        "test/*"
+      ]
+    }
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
   ],
   "exclude": [
-    "./build"
+    "./build",
+    "src/**/*.test.ts"
   ]
 }
