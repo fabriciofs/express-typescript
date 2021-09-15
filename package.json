@@ -36,11 +36,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
-    "mysql": "^2.18.1",
-    "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.1.6",
-    "tsoa": "^3.11.2",
-    "typeorm": "^0.2.37"
+    "tsoa": "^3.11.2"
   },
   "nodemonConfig": {
     "watch": [
