@@ -9,7 +9,7 @@ const config: ConnectionOptions = {
   password: process.env.MYSQL_PASSWORD,
   database: process.env.MYSQL_DATABASE,
   entities: [User, Post, Comment],
-  logging: true,
+  logging: false,
   synchronize: true,
 };
 
