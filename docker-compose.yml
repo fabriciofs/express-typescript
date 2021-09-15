@@ -1,6 +1,15 @@
 version: "3"
 
 services:
+  db:
+    image: mysql:8.0.26
+    environment:
+      - MYSQL_DATABASE=express-ts
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=mysql
+      - MYSQL_PASSWORD=mysql
+    ports:
+      - "3306:3306"
   app:
     build:
       context: .
@@ -9,3 +18,10 @@ services:
       - ./src:/app/src
     ports:
       - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - MYSQL_DATABASE=express-ts
+      - MYSQL_USER=mysql
+      - MYSQL_PASSWORD=mysql
+      - MYSQL_HOST=db
