@@ -1,4 +1,5 @@
 import { ConnectionOptions } from 'typeorm';
+import { User, Post, Comment } from '../models';
 
 const config: ConnectionOptions = {
   type: 'mysql',
@@ -7,7 +8,7 @@ const config: ConnectionOptions = {
   username: process.env.MYSQL_USER,
   password: process.env.MYSQL_PASSWORD,
   database: process.env.MYSQL_DATABASE,
-  entities: [],
+  entities: [User, Post, Comment],
   logging: true,
   synchronize: true,
 };
